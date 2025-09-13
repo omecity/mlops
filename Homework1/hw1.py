@@ -56,3 +56,8 @@ print(df.info())
 # Replace 'target_column' with the actual column you want to predict
 X = df.drop(columns=["y"])
 y = df["y"]
+
+
+
+# Split into train/test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
