@@ -43,3 +43,16 @@ print(f"\nThe dimension of the DataFrame after first column has been removed {df
 print("\nDataFrame after removing the first column: \n")
 print(df.head())
 print()
+
+
+
+# Take a look at the first few rows
+print("\nThe DataFrame info after removing the first column: \n")
+print(df.info())
+
+
+
+# Define features (X) and target (y)
+# Replace 'target_column' with the actual column you want to predict
+X = df.drop(columns=["y"])
+y = df["y"]
