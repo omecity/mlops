@@ -94,7 +94,7 @@ def build_linreg(X, y, n_cols):
 
 
 
-for i in [2]:
+for i in [1]:
 
     print()
 
