@@ -26,3 +26,20 @@ print(f"\nThe dimension of the original DataFrame is {df.shape}")
 # Take at the columns 
 print("\nThe name of columns of the DataFrame:")
 print(df.columns)
+
+
+
+# Remove the first column by its index df.columns[0] gets the name of the 
+# first column axis=1 specifies that a column is being dropped inplace=True
+# modifies the DataFrame directly
+df.drop(columns=df.columns[0], inplace=True)
+
+
+# Get the dimensions of the DataFrame
+print(f"\nThe dimension of the DataFrame after first column has been removed {df.shape}")
+
+
+
+print("\nDataFrame after removing the first column: \n")
+print(df.head())
+print()
