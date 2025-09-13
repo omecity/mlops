@@ -15,3 +15,14 @@ df = pd.read_csv("sampregdata.csv")
 print("\nOriginal DataFrame: \n")
 print(df.head())
 print()
+
+
+
+# Get the dimensions of the DataFrame
+print(f"\nThe dimension of the original DataFrame is {df.shape}")
+
+
+
+# Take at the columns 
+print("\nThe name of columns of the DataFrame:")
+print(df.columns)
