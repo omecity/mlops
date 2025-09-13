@@ -61,3 +61,33 @@ y = df["y"]
 
 # Split into train/test
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+
+
+# Fit separate models with one variable at a time
+
+def build_linreg(X, y, n_cols):
+
+    results = {}
+    
+    for combo in combinations(X.columns, n_cols):
+
+        # create a regression model
+        model = LinearRegression()
+
+        # train the model
+        model.fit(X_train[list(combo)], y_train)  
+
+        # make predictions
+        y_pred = model.predict(X_test[list(combo)])
+
+        # evaluate the model
+        mse_value = mean_squared_error(y_pred, y_test)
+
+        results[combo] = mse_value
+        if len(list(combo)) == 1:
+            print(f"MSE with {combo[0]}: {mse_value:.4f}")
+        else:
+            print(f"MSE with {combo}: {mse_value:.4f}")
+
+    return model, results
