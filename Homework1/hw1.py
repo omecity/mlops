@@ -91,3 +91,25 @@ def build_linreg(X, y, n_cols):
             print(f"MSE with {combo}: {mse_value:.4f}")
 
     return model, results
+
+
+
+for i in [2]:
+
+    print()
+
+    model, results = build_linreg(X, y, i)
+
+
+    best_var = min(results, key=results.get)
+    if i == 1:
+        print(f"\nBest variable is: {best_var[0]} with MSE = {results[best_var]:.4f} \n")
+    else:
+        print(f"\nBest variable is: {best_var} with MSE = {results[best_var]:.4f} \n")
+    # print("------------------------------------------------------------")
+
+
+    print(f"Intercept: {model.intercept_.round(4)}")
+    print(f"Coefficients: {model.coef_.round(4)}")
+
+    print("------------------------------------------------------------")
