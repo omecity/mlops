@@ -20,3 +20,19 @@ Install dependencies with:
 ```bash
 pip install -r requirements.txt
 ```
+
+---
+
+## 🚀 Usage
+
+Run the script by providing a CSV file with columns `y`, `x1`, and `x2`:
+
+```bash
+python mlflow_ica.py <file.csv>
+```
+
+Example:
+
+```bash
+python mlflow_ica.py reg2.csv
+```
