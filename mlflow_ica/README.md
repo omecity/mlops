@@ -36,3 +36,11 @@ Example:
 ```bash
 python mlflow_ica.py reg2.csv
 ```
+
+The script will:
+
+1. Read the dataset and select columns `y`, `x1`, `x2`.
+2. Train separate linear regression models using different subsets of `x1` and `x2`.
+3. Log metrics (MAE, MSE, RMSE, R²) and register the models in MLflow.
+
+---
