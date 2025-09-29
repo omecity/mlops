@@ -44,3 +44,17 @@ The script will:
 3. Log metrics (MAE, MSE, RMSE, R²) and register the models in MLflow.
 
 ---
+
+## 📊 View Results
+
+Start the MLflow UI to inspect runs, metrics, and models:
+
+```bash
+mlflow ui
+```
+
+Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+
+You will see the experiment: **`linear_models_with_columns_x1_x2`**, with one run for each model trained.
+
+---
